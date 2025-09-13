@@ -52,7 +52,7 @@
     </a>
     <div class="flex items-center space-x-6">
       <a href="tel:619-917-5UDGE" class="text-gray-300 font-semibold hover:text-white transition-colors hidden md:block">(619) 917-5387</a>
-      <a href="#contact" class="bg-[#99C4FE] text-black font-semibold px-6 py-3 text-base hover:bg-[#7BB3FE] transition-colors duration-300">Introduction Call</a>
+      <a href="#contact" class="bg-[#99C4FE] text-black font-semibold px-6 py-3 text-base hover:bg-[#7BB3FE] transition-colors duration-300">Meet the team</a>
     </div>
   </div>
 </header>
@@ -69,7 +69,7 @@
           Build extraordinary software, with a partner who shares your standards.
         </p>
         <div class="mt-10 fade-in-section" style="transition-delay: 300ms;">
-          <a href="#contact" class="bg-white text-black font-semibold px-24 py-6 hover:bg-gray-200 transition-colors duration-300 text-xl inline-block">Get In Touch</a>
+          <a href="#contact" class="bg-white text-black font-semibold px-24 py-6 hover:bg-gray-200 transition-colors duration-300 text-xl inline-block">Get Started</a>
         </div>
       </div>
     </div>
@@ -283,9 +283,12 @@
       <!-- Left: Get In Touch -->
       <div class="text-center md:text-left">
         <h2 class="text-3xl font-bold mb-6">Get In Touch</h2>
-        <div class="space-y-2 text-lg text-gray-300">
-          <p><a href="tel:619-917-5387" class="hover:text-white transition-colors">(619) 917-5387</a></p>
-          <p><a href="mailto:hello@stackitgroup.com" class="hover:text-white transition-colors">hello@stackitgroup.com</a></p>
+        <div class="space-y-6 text-lg text-gray-300">
+          <p>We'd LOVE to hear from you! Feel free to reach out to us at <a href="mailto:hello@stackitgroup.com" class="font-semibold text-white hover:underline">hello@stackitgroup.com</a> if you have any questions, need advice, or want to discuss a project.</p>
+          <div>
+            <p class="font-semibold">Call:</p>
+            <p><a href="tel:+16199175387" class="hover:text-white transition-colors">+1 (619) 917-5387</a></p>
+          </div>
         </div>
       </div>
 
@@ -305,37 +308,54 @@
 </footer>
 
 <!-- Contact Form Slide-out Panel -->
-<div id="contact-panel" class="fixed inset-y-0 right-0 z-[60] w-full max-w-2xl bg-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
+<div id="contact-panel" class="fixed inset-y-0 right-0 z-[60] w-full max-w-5xl bg-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
   <div class="relative h-full flex flex-col">
-    <div class="flex-shrink-0 p-6 flex justify-between items-center border-b">
-      <h2 class="text-2xl font-bold text-gray-900">Think we can help?</h2>
+    <div class="absolute top-0 right-0 pt-6 pr-6">
       <button id="close-panel-btn" class="text-gray-500 hover:text-gray-800 transition-colors">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
       </button>
     </div>
-    <div class="flex-grow overflow-y-auto p-8 md:p-10">
-      <p class="text-xl text-gray-600 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
-      <form action="#" method="POST">
+    <div class="flex-grow grid grid-cols-1 md:grid-cols-2">
+      <!-- Left Side: What Happens Next -->
+      <div class="bg-gray-50 p-8 md:p-12 flex flex-col justify-center">
+        <h3 class="text-3xl font-bold text-gray-900 mb-6">What happens next?</h3>
         <div class="space-y-6">
           <div>
-            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
-            <input type="text" name="full-name" id="full-name" autocomplete="name" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+            <h4 class="text-xl font-bold text-gray-800">1. Introduction Call</h4>
+            <p class="text-lg text-gray-600 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
           </div>
-          <div>
-            <label for="contact-info" class="block text-sm font-medium text-gray-700">Email or Phone Number</label>
-            <input type="text" name="contact-info" id="contact-info" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
-          </div>
-          <div>
-            <label for="message" class="block text-sm font-medium text-gray-700">What do you want to build?</label>
-            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg"></textarea>
+          <div class="pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">A member of our team will reach out within one business day to schedule your call.</p>
           </div>
         </div>
-        <div class="mt-8">
-          <button type="submit" class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block">
-            Send
-          </button>
-        </div>
-      </form>
+      </div>
+
+      <!-- Right Side: Form -->
+      <div class="p-8 md:p-12 flex flex-col justify-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-2">Think we can help?</h2>
+        <p class="text-xl text-gray-600 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
+        <form action="#" method="POST">
+          <div class="space-y-6">
+            <div>
+              <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+              <input type="text" name="full-name" id="full-name" autocomplete="name" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+            </div>
+            <div>
+              <label for="contact-info" class="block text-sm font-medium text-gray-700">Email or Phone Number</label>
+              <input type="text" name="contact-info" id="contact-info" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg">
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700">What do you want to build?</label>
+              <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 border border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 text-lg"></textarea>
+            </div>
+          </div>
+          <div class="mt-8">
+            <button type="submit" class="w-full bg-[#3F5FDD] text-white font-semibold px-24 py-6 hover:bg-[#3550B8] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#3F5FDD] text-xl inline-block">
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
