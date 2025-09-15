@@ -34,7 +34,7 @@
             top: 1.25rem;
             bottom: -1.25rem;
             width: 2px;
-            background-color: rgba(255, 255, 255, 0.2); /* Lighter line for dark bg */
+            background-color: #e5e7eb; /* gray-200 */
             transform: translateX(-50%);
         }
         .timeline-item:last-child::before {
@@ -51,7 +51,7 @@
             <img src="logo2025-dark-background.png" alt="Stackit Logo" class="h-9 w-auto">
         </a>
         <div class="flex items-center space-x-6">
-            <a href="#contact" class="bg-transparent border-2 border-[#00BBDD] text-[#00BBDD] font-semibold px-6 py-3 text-base hover:bg-[#00BBDD] hover:text-white transition-colors duration-300">Meet the team</a>
+            <a href="#contact" class="bg-transparent border-2 border-[#00BBDD] text-white font-semibold px-6 py-3 text-base hover:bg-[#00BBDD] hover:text-white transition-colors duration-300 rounded-lg">Meet the team</a>
         </div>
     </div>
 </header>
@@ -68,7 +68,7 @@
                     Build extraordinary software, with a partner who shares your standards.
                 </p>
                 <div class="mt-10 fade-in-section" style="transition-delay: 300ms;">
-                    <a href="#contact" class="bg-white text-black font-semibold px-24 py-6 hover:bg-gray-200 transition-colors duration-300 text-xl inline-block rounded-2xl">Get Started</a>
+                    <a href="#contact" class="bg-[#00BBDD] text-white font-semibold px-24 py-6 hover:bg-[#00AACC] transition-colors duration-300 text-xl inline-block rounded-2xl">Get Started</a>
                 </div>
             </div>
         </div>
@@ -84,14 +84,14 @@
                 </p>
                 <div class="mt-24 flex flex-col sm:flex-row items-center justify-center gap-6">
                     <a href="case-study.html" class="bg-transparent border-2 border-gray-800 text-gray-800 font-semibold px-20 py-5 hover:bg-gray-800 hover:text-white transition-colors duration-300 text-xl inline-block rounded-2xl">View Case Studies</a>
-                    <a href="#contact" class="bg-[#242D3C] text-white font-semibold px-24 py-6 hover:bg-[#1A202C] transition-colors duration-300 text-2xl inline-block rounded-2xl">Let's Discuss</a>
+                    <a href="#contact" class="bg-[#00BBDD] text-white font-semibold px-24 py-6 hover:bg-[#00AACC] transition-colors duration-300 text-2xl inline-block rounded-2xl">Let's Discuss</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- In-House Drive Section -->
-    <section class="py-20 md:py-32 bg-[#12748D]">
+    <section class="py-20 md:py-32 bg-gradient-to-r from-[#12748D] to-[#0F6B81]">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-4xl mx-auto mb-16 fade-in-section">
                 <h2 class="text-4xl md:text-6xl font-bold text-white">Your external team should feel like a top in-house team.</h2>
@@ -124,7 +124,7 @@
                 </div>
             </div>
             <div class="mt-16 text-center fade-in-section">
-                <a href="#process" class="bg-white text-black font-semibold px-24 py-6 hover:bg-gray-200 transition-colors duration-300 text-xl inline-block rounded-2xl">Discover Our Process</a>
+                <a href="#process" class="bg-[#00BBDD] text-white font-semibold px-24 py-6 hover:bg-[#00AACC] transition-colors duration-300 text-xl inline-block rounded-2xl">Discover Our Process</a>
             </div>
         </div>
     </section>
@@ -136,7 +136,7 @@
                 <div class="fade-in-section">
                     <h2 class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">We know that creating a great product is complicated.</h2>
                     <div class="mt-10">
-                        <a href="#contact" class="bg-gray-800 text-white font-semibold px-24 py-6 hover:bg-gray-900 transition-colors duration-300 text-xl inline-block rounded-2xl">Let's Talk</a>
+                        <a href="#contact" class="bg-[#00BBDD] text-white font-semibold px-24 py-6 hover:bg-[#00AACC] transition-colors duration-300 text-xl inline-block rounded-2xl">Let's Talk</a>
                     </div>
                 </div>
                 <div class="space-y-8 fade-in-section" style="transition-delay: 150ms;">
@@ -154,7 +154,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- Trusted By Logos -->
             <div class="mt-32 fade-in-section">
                 <div class="flex flex-wrap items-center justify-center gap-x-16 gap-y-8">
@@ -175,88 +174,87 @@
                     </a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <!-- Our Proven Process Section -->
-    <section id="process" class="py-20 md:py-32 bg-[#00BBDD]">
+    <section id="process" class="py-20 md:py-32 bg-white border-t border-gray-200">
         <div class="container mx-auto px-6">
             <div class="text-center max-w-4xl mx-auto mb-20 fade-in-section">
-                <h2 class="text-5xl md:text-6xl font-bold text-[#242D3C]">Our Proven Process</h2>
+                <h2 class="text-5xl md:text-6xl font-bold text-gray-900">Our Proven Process</h2>
             </div>
 
             <div class="max-w-3xl mx-auto">
                 <!-- Timeline Items -->
-                <div class="relative" style="--tw-text-opacity: 1; color: rgb(36 45 60 / var(--tw-text-opacity));">
+                <div class="relative">
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">1</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">1</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Introduction Call</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">A conversation to explore your vision and our process</p>
-                        <p class="text-xl text-[#242D3C]">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Introduction Call</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">A conversation to explore your vision and our process</p>
+                        <p class="text-xl text-gray-600">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
                     </div>
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">2</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">2</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Clarify the Why</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">Uncovering Your Purpose.</p>
-                        <p class="text-xl text-[#242D3C]">We dig deep to get to the heart of your project's 'why' and what success truly looks like. By mapping out your product needs against practical limits like budget and timeline, we create a feasible roadmap for your vision.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Clarify the Why</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">Uncovering Your Purpose.</p>
+                        <p class="text-xl text-gray-600">We dig deep to get to the heart of your project's 'why' and what success truly looks like. By mapping out your product needs against practical limits like budget and timeline, we create a feasible roadmap for your vision.</p>
                     </div>
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">3</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">3</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Proposal</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">Creating the game plan for the winning team.</p>
-                        <p class="text-xl text-[#242D3C]">Building on our shared understanding, we present your tailored game plan. This comprehensive proposal clearly outlines the cost, deliverables, timeline, and team structure, giving you full confidence in the path ahead.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Proposal</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">Creating the game plan for the winning team.</p>
+                        <p class="text-xl text-gray-600">Building on our shared understanding, we present your tailored game plan. This comprehensive proposal clearly outlines the cost, deliverables, timeline, and team structure, giving you full confidence in the path ahead.</p>
                     </div>
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">4</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">4</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Build Mode: ON</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">Building with Confidence, From Day One.</p>
-                        <p class="text-xl text-[#242D3C]">With the game plan in place, we translate high-level requirements into actionable tasks. Our team establishes a clear collaboration protocol and primes the technical environment for a purposeful and efficient build.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Build Mode: ON</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">Building with Confidence, From Day One.</p>
+                        <p class="text-xl text-gray-600">With the game plan in place, we translate high-level requirements into actionable tasks. Our team establishes a clear collaboration protocol and primes the technical environment for a purposeful and efficient build.</p>
                     </div>
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">5</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">5</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Pulse</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">See your vision manifest – two weeks at a time.</p>
-                        <p class="text-xl text-[#242D3C]">Your project comes alive in a steady "Pulse" of focused, two-week development cycles. This rhythm makes progress visible and maintains alignment, culminating in our core promise: a demonstration of a working software every two weeks.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Pulse</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">See your vision manifest – two weeks at a time.</p>
+                        <p class="text-xl text-gray-600">Your project comes alive in a steady "Pulse" of focused, two-week development cycles. This rhythm makes progress visible and maintains alignment, culminating in our core promise: a demonstration of a working software every two weeks.</p>
                     </div>
                     <div class="timeline-item pb-16 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">6</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">6</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">The Quality Gate</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">Your Green Light for a Confident Launch.</p>
-                        <p class="text-xl text-[#242D3C]">Before launch, we ensure total readiness. Every feature is rigorously tested against our highest standards, and we prepare your operational environment and empower your team for a seamless, confident go-live.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">The Quality Gate</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">Your Green Light for a Confident Launch.</p>
+                        <p class="text-xl text-gray-600">Before launch, we ensure total readiness. Every feature is rigorously tested against our highest standards, and we prepare your operational environment and empower your team for a seamless, confident go-live.</p>
                     </div>
                     <div class="timeline-item pb-12 pl-12 fade-in-section">
-                        <div class="absolute w-12 h-12 bg-[#242D3C]/10 rounded-full flex items-center justify-center -left-6 border-4 border-[#00BBDD]">
-                            <span class="text-[#242D3C] font-bold text-lg">7</span>
+                        <div class="absolute w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center -left-6 border-4 border-white">
+                            <span class="text-[#00BBDD] font-bold text-lg">7</span>
                         </div>
-                        <h3 class="text-3xl font-bold text-[#242D3C] mb-2">Beyond Launch</h3>
-                        <p class="text-lg font-semibold text-[#242D3C] opacity-80 mb-3">Your Partner in Continuous Growth and Evolution.</p>
-                        <p class="text-xl text-[#242D3C]">With your solution live, our focus shifts to ensuring its ongoing success. We provide robust support and proactive monitoring, turning system insights into actionable intelligence that informs your next strategic move.</p>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-2">Beyond Launch</h3>
+                        <p class="text-lg font-semibold text-gray-500 mb-3">Your Partner in Continuous Growth and Evolution.</p>
+                        <p class="text-xl text-gray-600">With your solution live, our focus shifts to ensuring its ongoing success. We provide robust support and proactive monitoring, turning system insights into actionable intelligence that informs your next strategic move.</p>
                     </div>
                 </div>
             </div>
-            <div class="mt-20 pt-20 border-t border-[#242D3C]/20 fade-in-section">
+            <div class="mt-20 pt-20 border-t border-gray-200 fade-in-section">
                 <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
                     <div class="md:col-span-2 text-center md:text-left">
-                        <h3 class="text-4xl md:text-5xl font-bold text-[#242D3C]">Let’s work together</h3>
-                        <p class="text-xl text-[#242D3C] opacity-80 mt-4">
+                        <h3 class="text-4xl md:text-5xl font-bold text-gray-900">Let’s work together</h3>
+                        <p class="text-xl text-gray-600 mt-4">
                             Reach out to our team to define, make and launch new products, predictably.
                         </p>
                     </div>
                     <div class="text-center md:text-right">
-                        <a href="#contact" class="bg-[#242D3C] text-white font-semibold px-24 py-6 hover:bg-[#1A202C] transition-colors duration-300 text-xl inline-block rounded-2xl">Introduction Call</a>
+                        <a href="#contact" class="bg-[#00BBDD] text-white font-semibold px-24 py-6 hover:bg-[#00AACC] transition-colors duration-300 text-xl inline-block rounded-2xl">Introduction Call</a>
                     </div>
                 </div>
             </div>
@@ -414,6 +412,4 @@
 </script>
 </body>
 </html>
-
-
 
