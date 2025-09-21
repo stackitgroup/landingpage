@@ -304,8 +304,10 @@
                 </div>
             </div>
             <div class="bg-white p-8 md:p-12 flex flex-col justify-center">
-                <h2 class="text-3xl font-bold text-gray-900 mb-2">Think we can help?</h2>
-                <p class="text-xl text-gray-600 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
+                <div id="form-header">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Think we can help?</h2>
+                    <p class="text-xl text-gray-600 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
+                </div>
                 <form method="POST" action="#" aria-label="Contact form" id="contact-form">
                     <div class="space-y-6">
                         <div>
@@ -322,9 +324,13 @@
                         </div>
                     </div>
                     <div class="mt-8">
-                        <button type="submit" class="w-full text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm:text-xl bg-gray-800 hover:bg-gray-900 transition-colors duration-300 inline-block rounded-2xl">Send Message</button>
+                        <button type="submit" class="w-full text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm-text-xl bg-gray-800 hover:bg-gray-900 transition-colors duration-300 inline-block rounded-2xl">Send Message</button>
                     </div>
                 </form>
+                <div id="thank-you-message" class="text-center h-full flex flex-col justify-center hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+                    <p class="text-xl text-gray-600">We've received your message and will be in touch shortly.</p>
+                </div>
             </div>
         </div>
     </div>
@@ -348,6 +354,8 @@
         const closeBtn = document.getElementById('close-panel-btn');
         const openTriggers = document.querySelectorAll('a[href="#contact"]');
         const form = document.getElementById('contact-form');
+        const formHeader = document.getElementById('form-header');
+        const thankYouMessage = document.getElementById('thank-you-message');
 
         let lastClickedTrigger = null;
 
@@ -372,6 +380,11 @@
                 if (scrollToTrigger && lastClickedTrigger) {
                     lastClickedTrigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 }
+                // Reset the form for the next time it's opened
+                thankYouMessage.classList.add('hidden');
+                formHeader.classList.remove('hidden');
+                form.classList.remove('hidden');
+                form.reset();
             }, 500);
         }
 
@@ -387,13 +400,13 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const formContainer = form.parentElement;
-            formContainer.innerHTML = `
-                    <div class="text-center h-full flex flex-col justify-center">
-                        <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
-                        <p class="text-xl text-gray-600">We've received your message and will be in touch shortly.</p>
-                    </div>
-                `;
+
+            // Hide the form and its header, show the thank you message
+            formHeader.classList.add('hidden');
+            form.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
+
+            // Close the panel after a delay
             setTimeout(() => closePanel(true), 2500);
         });
     });
