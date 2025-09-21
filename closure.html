@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Partner You've Been Searching For - Stackit</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;900&display=swap" rel="stylesheet">
@@ -30,6 +30,10 @@
 </head>
 <body class="bg-black text-gray-200 antialiased">
 
+<a href="index.html" class="fixed top-6 left-6 z-50">
+    <img src="stackit-logo.png" alt="Stackit Logo" class="w-auto h-5 sm:h-6" />
+</a>
+
 <main>
     <section class="pt-20 pb-20 md:pt-32 md:pb-32 bg-black relative">
         <!-- Top right close button -->
@@ -50,7 +54,7 @@
                         <a href="index.html#partner-section" class="text-lg font-semibold text-gray-300 hover:text-white transition-colors duration-300 group">
                             <span class="inline-block transition-transform duration-300 group-hover:-translate-x-2">&larr;</span> Back to Home
                         </a>
-                        <a href="#contact" class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full sm:w-auto rounded-lg">Let's Talk</a>
+                        <a href="#contact" class="whitespace-nowrap bg-[#3F5FDD] text-white font-semibold px-12 py-4 text-lg sm:px-24 sm:py-6 sm:text-xl hover:bg-[#3550B8] transition-colors duration-300 inline-block w-full md:w-auto rounded-lg">Introduction Call</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +135,9 @@
                 }
             });
         }, { threshold: 0.1 });
-        sections.forEach(section => observer.observe(section));
+        sections.forEach(section => {
+            section.classList.add('is-visible'); // Make all sections visible immediately
+        });
 
         const contactPanel = document.getElementById('contact-panel');
         const overlay = document.getElementById('overlay');
@@ -184,13 +190,9 @@
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-
-            // Hide the form and its header, show the thank you message
             formHeader.classList.add('hidden');
             form.classList.add('hidden');
             thankYouMessage.classList.remove('hidden');
-
-            // Close the panel after a delay
             setTimeout(() => closePanel(true), 2500);
         });
     });
