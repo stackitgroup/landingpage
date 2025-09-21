@@ -58,57 +58,68 @@
     </section>
 </main>
 
-<!-- This contact panel HTML is needed for the click event on "Let's Talk" to function correctly, as it is a common element across both pages. -->
-<div id="contact-panel" class="fixed inset-y-0 right-0 z-[60] w-full max-w-4xl bg-black text-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden">
+<div id="contact-panel" class="fixed inset-y-0 right-0 z-[9999] w-full max-w-5xl bg-white shadow-xl transform translate-x-full transition-transform duration-500 ease-in-out hidden overflow-y-auto">
     <div class="relative h-full flex flex-col">
         <div class="absolute top-0 right-0 pt-6 pr-6">
-            <button id="close-panel-btn" class="text-gray-400 hover:text-white transition-colors">
+            <button aria-label="Close panel" id="close-panel-btn" class="text-gray-500 hover:text-gray-800 transition-colors">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
         </div>
         <div class="flex-grow grid grid-cols-1 md:grid-cols-2">
-            <!-- Left Side: What Happens Next -->
-            <div class="bg-gray-900 p-8 md:p-12 flex flex-col justify-center">
-                <h3 class="text-3xl font-bold text-white mb-6">What happens next?</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-xl font-bold text-white">1. Introduction Call</h4>
-                        <p class="text-lg text-gray-300 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
+            <div class="hidden md:flex bg-gray-50 p-8 md:p-12 flex-col justify-center">
+                <div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">What happens next?</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800" id="contact">1. Introduction Call</h4>
+                            <p class="text-lg text-gray-600 mt-2">We hold a structured, two-way conversation to understand your vision, challenges, and goals. We'll provide a transparent overview of our process, ensuring we both have a confident decision on our fit as partners.</p>
+                        </div>
+                        <div class="pt-4 border-t border-gray-200">
+                            <p class="text-sm text-gray-500">A member of our team will reach out to schedule your call.</p>
+                        </div>
                     </div>
-                    <div class="pt-4 border-t border-gray-700">
-                        <p class="text-sm text-gray-500">A member of our team will reach out within one business day to schedule your call.</p>
+                    <div class="mt-12 pt-8">
+                        <div class="flex items-center justify-around gap-x-8">
+                            <img src="siemens-logo.png" alt="Siemens Logo" class="h-6 w-auto object-contain filter grayscale opacity-60" />
+                            <img src="i2sl-logo.png" alt="I2SL Logo" class="h-6 w-auto object-contain filter grayscale opacity-60" />
+                            <img src="aircuity_logo.png" alt="Aircuity Logo" class="h-6 w-auto object-contain filter grayscale opacity-60" />
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Right Side: Form -->
-            <div class="p-8 md:p-12 flex flex-col justify-center bg-black">
-                <h2 class="text-3xl font-bold text-white mb-2">Think we can help?</h2>
-                <p class="text-xl text-gray-300 mb-8">Share your challenge or the outcome you’re aiming for.</p>
-                <form action="#" method="POST">
+            <div class="bg-white p-8 md:p-12 flex flex-col justify-center">
+                <div id="form-header">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-2">Think we can help?</h2>
+                    <p class="text-xl text-gray-600 mb-8">Share the challenge you’re facing or the outcome you’re aiming for, and let’s get started.</p>
+                </div>
+                <form method="POST" action="#" aria-label="Contact form" id="contact-form">
                     <div class="space-y-6">
                         <div>
-                            <label for="full-name" class="block text-sm font-medium text-gray-400">Full Name</label>
-                            <input type="text" name="full-name" id="full-name" autocomplete="name" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md">
+                            <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                            <input type="text" name="fullName" id="full-name" autocomplete="name" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"/>
                         </div>
                         <div>
-                            <label for="contact-info" class="block text-sm font-medium text-gray-400">Email or Phone</label>
-                            <input type="text" name="contact-info" id="contact-info" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md">
+                            <label for="contact-info" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" name="contactInfo" id="contact-info" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"/>
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-400">What do you want to build?</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 bg-gray-800 border border-gray-700 shadow-sm focus:ring-[#2F5CEC] focus:border-[#2F5CEC] text-lg text-white rounded-md"></textarea>
+                            <label for="message" class="block text-sm font-medium text-gray-700">What do you want to build?</label>
+                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full px-4 py-3 bg-white border border-gray-300 text-gray-900 rounded-lg shadow-sm focus:ring-black focus:border-black text-lg"></textarea>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <button type="submit" class="w-full bg-[#2F5CEC] text-white font-semibold px-24 py-6 hover:bg-[#234baf] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#2F5CEC] text-xl inline-block rounded-2xl">Send</button>
+                        <button type="submit" class="w-full text-white font-semibold px-10 py-4 text-lg sm:px-20 sm:py-5 sm-text-xl bg-gray-800 hover:bg-gray-900 transition-colors duration-300 inline-block rounded-2xl">Send Message</button>
                     </div>
                 </form>
+                <div id="thank-you-message" class="text-center h-full flex flex-col justify-center hidden">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+                    <p class="text-xl text-gray-600">We've received your message and will be in touch shortly.</p>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<div id="overlay" class="fixed inset-0 z-50 bg-black bg-opacity-0 hidden transition-opacity duration-500 ease-in-out"></div>
+<div id="overlay" class="fixed inset-0 z-[9998] bg-black opacity-0 hidden transition-opacity duration-500 ease-in-out"></div>
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -122,51 +133,66 @@
         }, { threshold: 0.1 });
         sections.forEach(section => observer.observe(section));
 
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                header.classList.add('bg-black/70', 'backdrop-blur-sm', 'shadow-lg');
-                header.classList.remove('bg-black/50');
-            } else {
-                header.classList.remove('bg-black/70', 'backdrop-blur-sm', 'shadow-lg');
-                header.classList.add('bg-black/50');
-            }
-        });
-
         const contactPanel = document.getElementById('contact-panel');
         const overlay = document.getElementById('overlay');
         const closeBtn = document.getElementById('close-panel-btn');
         const openTriggers = document.querySelectorAll('a[href="#contact"]');
+        const form = document.getElementById('contact-form');
+        const formHeader = document.getElementById('form-header');
+        const thankYouMessage = document.getElementById('thank-you-message');
 
-        function openPanel() {
+        let lastClickedTrigger = null;
+
+        function openPanel(trigger) {
+            lastClickedTrigger = trigger;
             overlay.classList.remove('hidden');
             contactPanel.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
             requestAnimationFrame(() => {
-                overlay.classList.add('bg-opacity-50');
+                overlay.classList.add('opacity-75');
                 contactPanel.classList.remove('translate-x-full');
             });
         }
 
-        function closePanel() {
-            overlay.classList.remove('bg-opacity-50');
+        function closePanel(scrollToTrigger = false) {
+            overlay.classList.remove('opacity-75');
             contactPanel.classList.add('translate-x-full');
             setTimeout(() => {
                 overlay.classList.add('hidden');
                 contactPanel.classList.add('hidden');
                 document.body.style.overflow = '';
+                if (scrollToTrigger && lastClickedTrigger) {
+                    lastClickedTrigger.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+                // Reset the form for the next time it's opened
+                thankYouMessage.classList.add('hidden');
+                formHeader.classList.remove('hidden');
+                form.classList.remove('hidden');
+                form.reset();
             }, 500);
         }
 
         openTriggers.forEach(trigger => {
             trigger.addEventListener('click', e => {
                 e.preventDefault();
-                openPanel();
+                openPanel(trigger);
             });
         });
 
-        closeBtn.addEventListener('click', closePanel);
-        overlay.addEventListener('click', closePanel);
+        closeBtn.addEventListener('click', () => closePanel(false));
+        overlay.addEventListener('click', () => closePanel(false));
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Hide the form and its header, show the thank you message
+            formHeader.classList.add('hidden');
+            form.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
+
+            // Close the panel after a delay
+            setTimeout(() => closePanel(true), 2500);
+        });
     });
 </script>
 </body>
